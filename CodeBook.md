@@ -34,25 +34,26 @@ The following files are available for the train and test data. Their description
 Transformation involved:
 ------------------------
 
-# Step 1
-# merges the training set files containg the measurments (train/X_train.txt) with the subject
-# file (train/subject_train.txt) and activities file (train/y_train.txt). 
-# assuming the all the data are sitting inside "UCI HAR Dataset" folder under the working directory
+Step 1
+* merges the training set files containg the measurments (train/X_train.txt) with the subject
+* file (train/subject_train.txt) and activities file (train/y_train.txt). 
+* assuming the all the data are sitting inside "UCI HAR Dataset" folder under the working directory
 
-# Step 2
-# repeat step 1 with respective files in test folder , i.e. measurements (test/X_test.txt), 
-# subjects (test/subject_test.txt) abnd activities file (test/y_test.txt)
+Step 2
+* repeat step 1 with respective files in test folder , i.e. measurements (test/X_test.txt), 
+* subjects (test/subject_test.txt) abnd activities file (test/y_test.txt)
 
-#step 3
-# merger the train data set with the test data set into one single data frame
+step 3
+* merger the train data set with the test data set into one single data frame
 
-#step 4
-# subset the merged data frame by columns that contains measurements on mean and std deviation
-# big assumption is that all the features associated with this defintion has either mean or std in its naming.
-# the way to do it is to grep the word "mean" or "std" (case insensitive) from all the features as defined in "features.txt" table
+step 4
+* subset the merged data frame by columns that contains measurements on mean and std deviation
+* big assumption is that all the features associated with this defintion has either mean or std in its naming.
+* the way to do it is to grep the word "mean" or "std" (case insensitive) from all the features as defined in "features.txt" table
 
-# step 5 
-# add the activity label into the combined data frame by looking at the activity_labels.txt
+step 5 
+* add the activity label into the combined data frame by looking at the activity_labels.txt
 
-#Step 6 Generate Tidy dataset
+Step 6 
+* Generate Tidy dataset
 
